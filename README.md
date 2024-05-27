@@ -1,50 +1,104 @@
-# Welcome to your Expo app 👋
+# Guess My Number App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
 
-## Get started
+"Guess My Number" is a fun and interactive mobile game where you try to guess the number chosen by your device. This project is a React Native application written in TypeScript.
 
-1. Install dependencies
+## Table of Contents
 
-   ```bash
-   npm install
-   ```
+- Overview
+- Features
+- Installation
+- Running the App
+- Project Structure
+- Screenshots
 
-2. Start the app
+## Features
 
-   ```bash
-    npx expo start
-   ```
+- Start Screen: Enter a number to start the game.
+- Game Screen: The app will try to guess your number based on your inputs.
+- Game Over Screen: Displays the result and the number of attempts taken by the app.
+- Responsive Design: Ensures a smooth experience on both iOS and Android devices.
 
-In the output, you'll find options to open the app in a
+## Installation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Prerequisites
+Node.js (LTS version recommended)
+npm or yarn
+Expo CLI
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+- Steps
+  Clone the repository:
 
 ```bash
-npm run reset-project
+Copy code
+git clone https://github.com/your-username/guess-my-number.git
+cd guess-my-number
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Install the dependencies:
 
-## Learn more
+```bash
+npm install
+# or
+yarn install
+Install Expo CLI globally (if not already installed):
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install -g expo-cli
+# or
+yarn global add expo-cli
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Running the App
 
-## Join the community
+Start the development server:
 
-Join our community of developers creating universal apps.
+```bash
+expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Use the Expo Go app on your iOS or Android device to scan the QR code from the terminal or the browser.
+Project Structure
+go
+Copy code
+.
+├── assets
+│ ├── fonts
+│ └── images
+├── components
+│ ├── game
+│ │ ├── GuessLogItem.tsx
+│ │ └── NumberContainer.tsx
+│ ├── ui
+│ │ ├── Card.tsx
+│ │ ├── InstructionText.tsx
+│ │ ├── PrimaryButton.tsx
+│ │ └── Title.tsx
+├── constants
+│ └── Colors.ts
+├── screens
+│ ├── GameOverScreen.tsx
+│ ├── GameScreen.tsx
+│ └── StartGameScreen.tsx
+├── App.tsx
+├── index.tsx
+├── tsconfig.json
+└── package.json
+
+## Components
+
+- Game Components: Components specific to the game logic and display (e.g., GuessLogItem, NumberContainer).
+- UI Components: Reusable UI components (e.g., Card, InstructionText, PrimaryButton, Title).
+
+### Screens
+
+- StartGameScreen: The initial screen where the user enters a number.
+- GameScreen: The main game screen where the guessing happens.
+- GameOverScreen: The screen displayed when the game is over.
+
+### Constants
+
+- Colors.ts: Contains color constants used throughout the app.
+  Screenshots
